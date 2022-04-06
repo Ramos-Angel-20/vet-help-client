@@ -1,0 +1,48 @@
+.sidebar {
+    background-color: var(--sidebar-bg-color);
+    flex:  1 1 0;
+    max-width: 30rem;
+    padding: 2rem 0;
+    
+    &__text {
+        color: #cecece;
+        font-weight: 600;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__menu {
+        
+        &__item {
+            display: block;
+            padding: 2rem 2rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            color: var(--sidebar-font-color);
+            transition: all 100ms linear;
+            
+            &__icon {
+                margin-right: 1rem;
+            }
+
+            &:hover {
+                background-color: var(--body-bg-color);
+                color: var(--sidebar-font-color-hover);
+            }
+
+            &__active {
+                background-color: var(--body-bg-color);
+                display: block;
+                padding: 2rem 2rem;
+                cursor: pointer;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                color: var(--sidebar-font-color-hover);
+            }
+        }
+    }
+
+}

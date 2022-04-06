@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --logo-ff: 'Lobster', cursive;
+    --body-ff: 'Lato', sans-serif;
+    --body-bg-color: #ebebeb;
+    --font-color: #000;
+    --nav-height: 6.4rem;
+    --poppins-ff: 'Poppins', sans-serif;
+
+
+    //Sidebar
+    --sidebar-bg-color: #de4935;
+    --sidebar-font-color: #fff;
+    --sidebar-font-color-hover: #de4935;
+
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--body-bg-color);
+    min-height: 100vh;
+    font-family: var(--poppins-ff);
+    color: var(--font-color);
+}
+
+body.dark {
+    --body-bg-color: #1b1b1b;
+    --font-color: #fff;
+
+    // Sidebar
+    --sidebar-bg-color: #000;
+    --sidebar-font-color: #fff;
+    --sidebar-font-color-hover: #de4935;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

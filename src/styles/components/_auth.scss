@@ -1,0 +1,178 @@
+.auth {
+    min-height: 100vh;
+    height: auto;
+    background-image: url('../../assets/istockphoto-1204639948-1024x1024.jpg');
+    background-size: contain;
+    z-index: 0;
+
+
+    &__overlay {
+        background-color: rgba($color: #de4935, $alpha: 0.8);
+        z-index: 9;
+        min-height: 100vh;
+        height: auto;
+        width: 100%;
+
+        &__content {
+            padding: 1rem 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+
+            &__main-text {
+                & p {
+                    color: #fff;
+                    font-size: clamp(3rem, 5vw, 6rem);
+                    font-weight: 900;
+                    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    
+                    &:nth-of-type(2) {
+                        font-size: clamp(1.8rem, 5vw, 3rem);
+                    }
+                }
+            }
+
+            &__form {
+                background-color: #fff;
+                width: 100%;
+                border-radius: 5px;
+                min-height: 35rem;
+                height: auto;
+                box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+                padding: 1rem 0;
+
+                &__error-message {
+                    width: 90%;
+                    margin: 0 auto;
+                    color: red;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
+
+                &__logo-field {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: var(--logo-ff);
+                    font-size: 3rem;
+                    color: #de4935;
+                    user-select: none;
+
+                    &__icon {
+                        margin-right: 1rem;
+                    }
+                }
+
+                & input {
+                    width: 90%;
+                    margin: 0 auto;
+                    display: block;
+                    outline: none;
+                    padding: 1rem 2rem;
+                    border-radius: 5px;
+                    font-family: var(--poppins-ff);
+                    font-weight: 600;
+                    border: none;
+                    background-color: rgba(0, 0, 0, 0.06);
+                }
+
+                &__buttons-field {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    align-items: center;
+
+                    & p {
+                        color: black;
+                        text-shadow: none;
+                    }
+
+                    & button {
+                        background-color: #de4935;
+                        color: #fff;
+                        border: none;
+                        outline: none;
+                        padding: 1rem 2rem;
+                        font-family: var(--poppins-ff);
+                        font-weight: 600;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        border: 2px solid #de4935;
+
+                        &:hover {
+                            color: #de4935;
+                            background-color: #fff;
+                        }
+
+                        &:nth-of-type(2) {
+                            background-color: rgba(0, 0, 0, 0.06);
+                            color: gray;
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            border: unset;
+                            
+                            &:hover {
+                                color: #fff;
+                                background-color: dodgerblue;
+                            }
+
+                            & img {
+                                width: 2rem;
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                &__link-field {
+                    font-size: 1.3rem;
+                    text-align: center;
+                    text-decoration: underline;
+                    color: #de4935;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .auth {
+
+        &__overlay {
+            display: flex;
+            align-items: center;
+            
+            &__content {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+
+                &__main-text {
+                    & p {
+                        justify-self: flex-end;
+                        flex-shrink: 0;
+    
+                        
+                    }
+                }
+
+                &__form {
+                    justify-self: flex-end;
+                    width: 35rem;
+                    margin-left: 2rem;
+                    
+                }
+            }
+        }   
+    }
+}

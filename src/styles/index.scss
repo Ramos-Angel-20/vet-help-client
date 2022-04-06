@@ -1,0 +1,12 @@
+@import './base/settings';
+
+//Components
+@import './components/navbar';
+@import './components/hero';
+@import './components/floatingButton';
+@import './components/profileService';
+@import './components/sidebar';
+
+//Pages
+@import './components/auth';
+@import './components/dasboard';
